@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<style>
+    header
+    {
+        min-height: 100vh;
+        background: rgb(255, 136, 0);
+    }
+
+    .card img
+    {
+        height: 100%;
+
+        
+    }
+    .card
+    {
+        border:none;
+        line-height: 1;
+    }
+
+    .card-title
+    {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .card-text
+    {
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-decoration: underline;
+    }
+    .card-img-container
+    {
+        height: 256px;
+        overflow: hidden;
+    }
+
+    ul
+    {
+        list-style: none;
+        line-height: 3;
+
+    }
+
+    a
+    {
+        color:black
+    }
+</style>
+
+
+<header style="">
+    {% include 'navbar.html' %}
+
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+            <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+        </ol>
+        <div class="carousel-inner h-100" role="listbox">
+            <div class="carousel-item h-100 active">
+                <img src="{% static 'images/img1.jpg' %}" class="w-100 d-block" alt="First slide">
+            </div>
+            <div class="carousel-item h-100">
+                <img src="{% static 'images/img7.jpg' %}" class="w-100 d-block" alt="Second slide">
+            </div>
+            <div class="carousel-item  h-100">
+                <img src="{% static 'images/img9.jpg' %}"" class="w-100 d-block" alt="Third slide">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+              
+</header>
+
+
+<section class=" py-5 px-2">
+    <h1> Our services</h1>
+<div class="row py-4 g-4 w-100 ">
+
+    <div class="col-md-4">
+        <div class="card  ">
+            <div class="card-img-container">
+                <img class="card-img-top " src="{% static 'images/service1.jpg' %}" alt="Title">
+        
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Find the best products</h4>
+              <p class="card-text">command now</p>
+            </div>
+          </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card  ">
+            <div class="card-img-container">
+                <img class="card-img-top " src="{% static 'images/service3.jpg' %}" alt="Title">
+
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Your restaurant, delivered</h4>
+              <p class="card-text">be partner !</p>
+            </div>
+          </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card  ">
+            <div class="card-img-container">
+                <img class="card-img-top " src="{% static 'images/service2.jpg' %}" alt="Title">
+
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">Deliver with Uber Eats</h4>
+              <p class="card-text">Sign up to deliver
+            </p>
+            </div>
+          </div>
+    </div>
+
+
+
+</section>
+
+
+<!-- <section class="px-2 py-5">
+    <h1> Cities near me</h1>
+<div class="row">
+  
+</div>
+
+</section> -->
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+
